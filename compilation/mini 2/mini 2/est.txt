@@ -1,0 +1,11 @@
+SELECT * FROM employes;
+SELECT nom, adresse FROM clients WHERE ville = 'Paris';
+SELECT * FROM produits WHERE prix > 100 ORDER BY prix DESC;
+SELECT * FROM commandes WHERE id_client = 123 LIMIT 10;
+UPDATE produits SET nom = 'Nouveau Produit' WHERE catégorie = 'Electronique';
+DELETE FROM commandes WHERE date_commande < '2023-01-01';
+SELECT SUM(quantité) AS total_stock FROM produits WHERE catégorie = 'Vêtements';
+SELECT SUM(prix_unitaire * quantité) AS montant_total FROM commandes WHERE id_client = 456;
+SELECT * FROM clients WHERE nom LIKE 'A%Smith';
+INSERT INTO produits (nom, prix, quantité, catégorie) VALUES ('Nouveau Produit', 49.99, 100, 'Épicerie');
+QUIT
